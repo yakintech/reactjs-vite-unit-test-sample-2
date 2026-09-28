@@ -1,0 +1,20 @@
+{
+  "name": "global-foods-b2b-api",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "dev": "node --watch --disable-warning=ExperimentalWarning src/server.js",
+    "start": "node --disable-warning=ExperimentalWarning src/server.js",
+    "db:reset": "node --disable-warning=ExperimentalWarning src/db/reset.js",
+    "test": "node --disable-warning=ExperimentalWarning --test"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
