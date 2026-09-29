@@ -8,6 +8,7 @@ import Login from './pages/Login'
 import ProductDetail from './pages/ProductDetail'
 import Products from './pages/Products'
 import Register from './pages/Register'
+import Search from './unit-test-components-sample/Search'
 
 function NotFound() {
   return (
@@ -19,6 +20,9 @@ function NotFound() {
 }
 
 export default function App() {
+
+  return <Search />
+
   return (
     <>
       <Routes>

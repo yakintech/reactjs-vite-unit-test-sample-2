@@ -2,10 +2,12 @@ import { useState } from 'react'
 import { Link, NavLink, Outlet, useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import { useCart } from '../context/CartContext'
+import { useTheme } from '../context/ThemeContext'
 
 function Header() {
   const { user, logout } = useAuth()
   const { count } = useCart()
+  const { theme, toggleTheme } = useTheme()
   const navigate = useNavigate()
   const [q, setQ] = useState('')
 
@@ -31,6 +33,14 @@ function Header() {
               <option>EUR</option>
               <option>GBP</option>
             </select>
+            <button
+              type="button"
+              className="theme-toggle"
+              onClick={toggleTheme}
+              aria-label={theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
+            >
+              {theme === 'dark' ? '☀️ Light' : '🌙 Dark'}
+            </button>
           </span>
         </div>
       </div>
